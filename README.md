@@ -42,7 +42,7 @@ eth1      Link encap:Ethernet  HWaddr 60:e3:27:06:e6:6a
           RX bytes:191415 (186.9 KiB)  TX bytes:2113881 (2.0 MiB)
 [...]
 ```
-BTW:
+## BTW:
 ```
 uname -a
 Linux orangepipc 3.4.112-sun8i #10 SMP PREEMPT Sun Oct 23 16:06:55 CEST 2016 armv7l GNU/Linux
