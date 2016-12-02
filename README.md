@@ -5,8 +5,8 @@ For armbian / Orange Pi PC / TP-Link UE300
 ## Prepare
 ```sh
 sudo apt-get install build.essential git
-git clone https://github.com/xk/rtl8152.git
-cd rtl8152
+git clone https://github.com/xk/rtl8152-rtl8153.git
+cd rtl8152-rtl8153
 ```
 ## Compile
 ```sh
