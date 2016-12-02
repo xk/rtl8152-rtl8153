@@ -1,0 +1,14 @@
+# This is used to change the default configuration of Realtek USB ethernet adapters
+
+ACTION!="add", GOTO="usb_realtek_net_end"
+SUBSYSTEM!="usb", GOTO="usb_realtek_net_end"
+ENV{DEVTYPE}!="usb_device", GOTO="usb_realtek_net_end"
+
+# Modify this to change the default value
+ENV{REALTEK_NIC_MODE}="1"
+
+ATTR{idVendor}=="0bda", ATTR{idProduct}=="8153", ATTR{bConfigurationValue}!="$env{REALTEK_NIC_MODE}", ATTR{bConfigurationValue}="$env{REALTEK_NIC_MODE}"
+ATTR{idVendor}=="0bda", ATTR{idProduct}=="8152", ATTR{bConfigurationValue}!="$env{REALTEK_NIC_MODE}", ATTR{bConfigurationValue}="$env{REALTEK_NIC_MODE}"
+ATTR{idVendor}=="04e8", ATTR{idProduct}=="a101", ATTR{bConfigurationValue}!="$env{REALTEK_NIC_MODE}", ATTR{bConfigurationValue}="$env{REALTEK_NIC_MODE}"
+
+LABEL="usb_realtek_net_end"
