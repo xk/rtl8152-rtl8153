@@ -2435,7 +2435,7 @@ static int rtl8153_enable(struct r8152 *tp)
 	if (test_bit(RTL8152_UNPLUG, &tp->flags))
 		return -ENODEV;
 
-	usb_disable_lpm(tp->udev);
+	//usb_disable_lpm(tp->udev);
 	set_tx_qlen(tp);
 	rtl_set_eee_plus(tp);
 	switch (tp->version) {
@@ -5042,7 +5042,7 @@ static void rtl8153_disable(struct r8152 *tp)
 	rtl_disable(tp);
 	rtl_reset_bmu(tp);
 	tp->rtl_ops.aldps_enable(tp, true);
-	usb_enable_lpm(tp->udev);
+	//usb_enable_lpm(tp->udev);
 }
 
 static int rtl8152_set_speed(struct r8152 *tp, u8 autoneg, u16 speed, u8 duplex)
@@ -5197,7 +5197,7 @@ static void rtl8153_up(struct r8152 *tp)
 	tp->rtl_ops.aldps_enable(tp, true);
 	r8153_u2p3en(tp, true);
 	tp->rtl_ops.u1u2_enable(tp, true);
-	usb_enable_lpm(tp->udev);
+	//usb_enable_lpm(tp->udev);
 }
 
 static void rtl8153_down(struct r8152 *tp)
@@ -5719,7 +5719,7 @@ static void r8153_init(struct r8152 *tp)
 		msleep(20);
 	}
 
-	usb_disable_lpm(tp->udev);
+	//usb_disable_lpm(tp->udev);
 	r8153_u2p3en(tp, false);
 
 	if (tp->version == RTL_VER_04) {
