@@ -2,6 +2,10 @@
 *2 de Diciembre 2016, jorge@jorgechamorro.com*
 
 For armbian / Orange Pi PC / TP-Link UE300
+
+See:
+https://docs.armbian.com/User-Guide_Advanced-Features/#how-to-build-a-wireless-driver
+
 ## Prepare
 ```sh
 sudo apt-get install build.essential git
